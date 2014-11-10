@@ -1,0 +1,82 @@
+sk Ubuntu is a question and answer site for Ubuntu users and developers. It's 100% free, no registration required.
+The fastest way to create a file from a terminal
+up vote 4 down vote favorite
+1
+	
+
+What is the simplest way to create a file using a command-line? Usually I use:
+
+touch filename
+
+But is this the simplest/fastest way?
+command-line bash files gnome-terminal
+shareimprove this question
+	
+edited Oct 30 '13 at 6:52
+
+	
+asked Sep 23 '13 at 5:07
+Radu Rădeanu
+48.8k1394174
+	
+add a comment
+1 Answer
+active oldest votes
+up vote 9 down vote accepted
+	
+
+This will save you five keypresses relative to touch filename
+
+>filename
+
+but is not the equivalent of touch as it will truncate filename if it exists. The following does what you want
+
+>>filename
+
+but note that it is not equivalent to touch either, as it does not update filename's modification timestamp.
+shareimprove this answer
+	
+answered Sep 23 '13 at 6:10
+zwets
+3,5361521
+	
+4 	 
+	
+Could also add alias t='touch' to your .bashrc :P –  Der Flatulator Sep 23 '13 at 9:19
+add a comment
+Your Answer
+
+ 
+Sign up or log in
+
+Sign up using Google
+
+Sign up using Facebook
+
+Sign up using Stack Exchange
+Post as a guest
+Name
+Email
+
+By posting your answer, you agree to the privacy policy and terms of service.
+Not the answer you're looking for? Browse other questions tagged command-line bash files gnome-terminal or ask your own question.
+
+asked
+	
+
+1 year ago
+
+viewed
+	
+
+9276 times
+
+active
+	
+
+1 year ago
+Economics Q&A
+98% committed
+Linked
+7
+How to add an option to create a new file with a specific extension in right 
